@@ -5,6 +5,6 @@ using TMPro;
 
 public class DamageText : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI dmgText;
-    public TextMeshProUGUI DmgText => dmgText;
+    [SerializeField] private TMP_Text dmgText;
+    public TMP_Text DmgText => dmgText;
 }

@@ -292,7 +292,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.28601718, y: -0.051181495}
@@ -482,7 +482,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.99
+  orthographic size: 9.19
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -561,7 +561,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -577,9 +577,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d04b50357ce034040a10ace30ada31d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  botCount: 10
+  botCount: 20
   testGO: {fileID: 6041799451744940792, guid: dd64f4b6ceaac9d42a5568826954a0ba, type: 3}
-  delayBtwSpawns: 2
+  delayBtwSpawns: 1
 --- !u!4 &1430281324
 Transform:
   m_ObjectHideFlags: 0
@@ -589,7 +589,7 @@ Transform:
   m_GameObject: {fileID: 1430281322}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.16, y: 2.46, z: 0}
+  m_LocalPosition: {x: -0.55, y: 2.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -622,14 +622,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {x: 2.8798494, y: -0.6993916, z: 0}
-  - {x: 4.2649193, y: 2.098176, z: 0}
-  - {x: 8.749255, y: 2.3450198, z: 0}
-  - {x: 13.00046, y: 0.6719649, z: 0}
-  - {x: 13.117016, y: -5.1119633, z: 0}
-  - {x: 5.1622925, y: -5.3159304, z: 0}
-  - {x: 0.16509533, y: -3.305397, z: 0}
-  - {x: 10.611132, y: -0.49356186, z: 0}
+  - {x: -6.8997154, y: 1.3021522, z: 0}
+  - {x: -0.82864183, y: 4.0248337, z: 0}
+  - {x: 7.035, y: 1.9109507, z: 0}
+  - {x: 6.6460457, y: -4.041744, z: 0}
+  - {x: -0.84555286, y: -5.022587, z: 0}
+  - {x: -6.510765, y: -1.4881759, z: 0}
+  - {x: -8.57391, y: -1.5219985, z: 0}
 --- !u!1001 &5751732584879361865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -640,7 +639,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4549187335068129581, guid: b5d371e1483a6ab4d8d8fdfc4c60af93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.72
+      value: 1.84
       objectReference: {fileID: 0}
     - target: {fileID: 4549187335068129581, guid: b5d371e1483a6ab4d8d8fdfc4c60af93, type: 3}
       propertyPath: m_LocalPosition.y
@@ -679,8 +678,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4692915518409755528, guid: b5d371e1483a6ab4d8d8fdfc4c60af93, type: 3}
-      propertyPath: delayBtwAttacks
-      value: 5
+      propertyPath: damage
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7736286938507510773, guid: b5d371e1483a6ab4d8d8fdfc4c60af93, type: 3}
       propertyPath: m_Name

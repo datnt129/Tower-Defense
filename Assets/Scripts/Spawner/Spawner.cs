@@ -37,7 +37,7 @@ public class Spawner : MonoBehaviour
     private void SpawnBot()
     {
         GameObject newInstance = _pooler.GetInstanceFromPool();
-
+        newInstance.transform.position = transform.position;
         Bot bot = newInstance.GetComponent<Bot>();
         bot.Waypoint = _waypoint;
         newInstance.SetActive(true);

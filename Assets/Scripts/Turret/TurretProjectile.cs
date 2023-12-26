@@ -59,11 +59,11 @@ public class TurretProjectile : MonoBehaviour
 
     private bool IsTurretEmpty()
     {
-        return (_currentProjectileLoaded.transform.parent == null);
+        return ( _currentProjectileLoaded == null );
     }
 
     public void ResetTurretProjectile()
     {
-        
+        _currentProjectileLoaded = null;
     }
 }

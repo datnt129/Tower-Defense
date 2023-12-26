@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bf6431163f8c0c4ca60161a288f1beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmgText: {fileID: 0}
+  dmgText: {fileID: 2899823100912437303}
 --- !u!95 &3942235196548972097
 Animator:
   serializedVersion: 5

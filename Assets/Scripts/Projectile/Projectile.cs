@@ -55,7 +55,7 @@ public class Projectile : MonoBehaviour
 
     public void ResetProjectile()
     {
-        
+        _botTarget = null;
     }
 }
 
