@@ -18,6 +18,8 @@ public class Bot : MonoBehaviour
 
     BotHealth _botHealth;
 
+    public BotHealth BotHealth => _botHealth;    
+
     void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();

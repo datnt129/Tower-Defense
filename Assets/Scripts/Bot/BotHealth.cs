@@ -17,33 +17,16 @@ public class BotHealth : MonoBehaviour
     private Image _healthBar;
     private Bot _bot;
 
-    //Temp var
-    BotFX _botFx;
-    //Temp var
-
     private void Start()
     {
         CreateHealthBar();
         CurrentHealth = initialHealth;
         _bot = GetComponent<Bot>();
-
-        //Temp var
-        _botFx = GetComponent<BotFX>();
-        //Temp var
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            DealDamage(5f);
-            // _healthBar.fillAmount = Mathf.Lerp(_healthBar.fillAmount, CurrentHealth / maxHealth, Time.deltaTime * 10f);
-            _healthBar.fillAmount = Mathf.Clamp(CurrentHealth / maxHealth, 0, 1);
-
-            //Temp var
-            StartCoroutine(_botFx.BotHit(_bot, 5f));
-            //Temp var        
-        }
+        _healthBar.fillAmount = Mathf.Clamp(CurrentHealth / maxHealth, 0, 1);
     }
     private void CreateHealthBar()
     {
