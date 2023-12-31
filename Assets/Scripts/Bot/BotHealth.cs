@@ -51,10 +51,7 @@ public class BotHealth : MonoBehaviour
     private void Die()
     {
         OnBotKilled?.Invoke(_bot);
-        ResetHealth();
-        _bot.ResumeMovement();
-        gameObject.SetActive(false);
-        ObjectPooler.ReturnToPool(gameObject);
+        Destroy(gameObject);
     }
 
     public void ResetHealth()

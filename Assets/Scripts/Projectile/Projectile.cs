@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour
             OnBotHit?.Invoke(_botTarget, Damage);
             _botTarget.BotHealth.DealDamage(Damage);
             TurretOwner.ResetTurretProjectile();
-            ObjectPooler.ReturnToPool(gameObject);
+            Destroy(gameObject);
         }
     }
 
@@ -51,11 +51,6 @@ public class Projectile : MonoBehaviour
     public void SetBot(Bot bot)
     {
         _botTarget = bot;
-    }
-
-    public void ResetProjectile()
-    {
-        _botTarget = null;
     }
 }
 

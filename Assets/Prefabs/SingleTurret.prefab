@@ -160,7 +160,6 @@ GameObject:
   - component: {fileID: 6836226393496269866}
   - component: {fileID: 7800794958568499579}
   - component: {fileID: 4692915518409755528}
-  - component: {fileID: 8639529765277385102}
   m_Layer: 0
   m_Name: SingleTurret
   m_TagString: Untagged
@@ -245,20 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6529e82547330994aa2b7d714ffb3b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 8398391492930051736, guid: 3baa3f7b270c29f44a8e94bb63d47d5e, type: 3}
   projectileSpawnPosition: {fileID: 687170119248730962}
   delayBtwAttacks: 1
-  damage: 2
---- !u!114 &8639529765277385102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7736286938507510773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0ea33d1d41f32044b48c64ba4209a25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 8398391492930051736, guid: 3baa3f7b270c29f44a8e94bb63d47d5e, type: 3}
-  poolSize: 10
+  damage: 10

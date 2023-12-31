@@ -14,11 +14,6 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Make the game run as fast as possible
-        Application.targetFrameRate = -1;
-        // Limit the framerate to 60
-        Application.targetFrameRate = 60;
-
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();

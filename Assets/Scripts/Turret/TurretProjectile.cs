@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TurretProjectile : MonoBehaviour
 {
+    [SerializeField] protected GameObject projectilePrefab;
     [SerializeField] protected Transform projectileSpawnPosition;
     [SerializeField] protected float delayBtwAttacks = 2f;
     [SerializeField] protected float damage = 2f;
@@ -12,14 +13,12 @@ public class TurretProjectile : MonoBehaviour
 
     public float DelayPerShot { get; set; }
     protected float _nextAttackTime;
-    protected ObjectPooler _pooler;
     protected Turret _turret;
     protected Projectile _currentProjectileLoaded;
 
     private void Start()
     {
         _turret = GetComponent<Turret>();
-        _pooler = GetComponent<ObjectPooler>();
         Damage = damage;
         DelayPerShot = delayBtwAttacks;
         LoadProjectile();
@@ -46,15 +45,11 @@ public class TurretProjectile : MonoBehaviour
     
     protected virtual void LoadProjectile()
     {
-        GameObject newInstance = _pooler.GetInstanceFromPool();
-        newInstance.transform.localPosition = projectileSpawnPosition.position;
-        newInstance.transform.SetParent(projectileSpawnPosition);
+        GameObject newInstance = Instantiate(projectilePrefab, projectileSpawnPosition.position, projectileSpawnPosition.rotation, projectileSpawnPosition);
 
         _currentProjectileLoaded = newInstance.GetComponent<Projectile>();
         _currentProjectileLoaded.TurretOwner = this;
-        _currentProjectileLoaded.ResetProjectile();
         _currentProjectileLoaded.Damage = Damage;
-        newInstance.SetActive(true);
     }
 
     private bool IsTurretEmpty()

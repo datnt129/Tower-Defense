@@ -38,9 +38,7 @@ public class BotAnimations : MonoBehaviour
         _bot.StopMovement();
         // Instantiate(deathParticles, transform.position, Quaternion.identity);
         yield return new WaitForSeconds(0.1f);
-        _bot.ResumeMovement();
-        _botHealth.ResetHealth();
-        ObjectPooler.ReturnToPool(_bot.gameObject);
+        Destroy(gameObject);
     }
 
     private void BotHit(Bot bot)

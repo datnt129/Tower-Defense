@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 112142949}
   - component: {fileID: 112142951}
-  - component: {fileID: 112142950}
   m_Layer: 0
   m_Name: DamageTextManager
   m_TagString: Untagged
@@ -156,20 +155,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1302308092}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &112142950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112142948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0ea33d1d41f32044b48c64ba4209a25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 5543984208366109120, guid: 022ff80b695f9b34791c59b746c1ecb9, type: 3}
-  poolSize: 10
 --- !u!114 &112142951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494f3da5a129fac4e8034c635f2bad41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textDmgPrefab: {fileID: 5543984208366109120, guid: 022ff80b695f9b34791c59b746c1ecb9, type: 3}
 --- !u!1 &337465845
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +468,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.19
+  orthographic size: 5.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -557,7 +543,6 @@ GameObject:
   - component: {fileID: 1430281324}
   - component: {fileID: 1430281326}
   - component: {fileID: 1430281323}
-  - component: {fileID: 1430281325}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -578,7 +563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   botCount: 20
-  testGO: {fileID: 6041799451744940792, guid: dd64f4b6ceaac9d42a5568826954a0ba, type: 3}
+  gameObj: {fileID: 6041799451744940792, guid: dd64f4b6ceaac9d42a5568826954a0ba, type: 3}
   delayBtwSpawns: 1
 --- !u!4 &1430281324
 Transform:
@@ -595,20 +580,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1430281325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430281322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0ea33d1d41f32044b48c64ba4209a25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 6041799451744940792, guid: dd64f4b6ceaac9d42a5568826954a0ba, type: 3}
-  poolSize: 20
 --- !u!114 &1430281326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,13 +593,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {x: -6.8997154, y: 1.3021522, z: 0}
-  - {x: -0.82864183, y: 4.0248337, z: 0}
-  - {x: 7.035, y: 1.9109507, z: 0}
-  - {x: 6.6460457, y: -4.041744, z: 0}
-  - {x: -0.84555286, y: -5.022587, z: 0}
-  - {x: -6.510765, y: -1.4881759, z: 0}
-  - {x: -8.57391, y: -1.5219985, z: 0}
+  - {x: -6.470672, y: 0.74109554, z: 0}
+  - {x: -0.5646147, y: 2.374669, z: 0}
+  - {x: 7.4310374, y: 0.6568253, z: 0}
 --- !u!1001 &5751732584879361865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -679,7 +646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4692915518409755528, guid: b5d371e1483a6ab4d8d8fdfc4c60af93, type: 3}
       propertyPath: damage
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7736286938507510773, guid: b5d371e1483a6ab4d8d8fdfc4c60af93, type: 3}
       propertyPath: m_Name

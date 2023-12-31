@@ -87,8 +87,7 @@ public class Bot : MonoBehaviour
     private void EndPointReached()
     {
         OnEndReached?.Invoke(this);
-        _botHealth.ResetHealth();
-        ObjectPooler.ReturnToPool(gameObject);
+        Destroy(gameObject);
     }
 
     public void StopMovement()
