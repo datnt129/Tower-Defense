@@ -644,10 +644,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4692915518409755528, guid: b5d371e1483a6ab4d8d8fdfc4c60af93, type: 3}
-      propertyPath: damage
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7736286938507510773, guid: b5d371e1483a6ab4d8d8fdfc4c60af93, type: 3}
       propertyPath: m_Name
       value: SingleTurret

@@ -6,7 +6,9 @@ using UnityEngine;
 public class Bot : MonoBehaviour
 {
     public static Action<Bot> OnEndReached;
-    [SerializeField] private float InittialSpeed;
+    [SerializeField] float InittialSpeed;
+    [SerializeField] int deathCoinReward;
+
     private float speed;
     public Waypoint Waypoint;
     int _currentWaypointIndex;
@@ -18,7 +20,9 @@ public class Bot : MonoBehaviour
 
     BotHealth _botHealth;
 
-    public BotHealth BotHealth => _botHealth;    
+    public BotHealth BotHealth => _botHealth;
+    
+    public int DeathCoinReward => deathCoinReward;
 
     void Start()
     {
